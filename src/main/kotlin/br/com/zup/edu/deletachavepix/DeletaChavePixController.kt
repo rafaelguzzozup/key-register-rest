@@ -18,7 +18,6 @@ class DeletaChavePixController(
     @Delete("/pix/{pixId}")
     fun deleta(@PathVariable clienteId: String, @PathVariable pixId: String): HttpResponse<Any> {
 
-
         LOGGER.info("removendo chave pix = $pixId para o cliente com id = $clienteId")
 
         val grpcRequest = DeletaChavePixRequest.newBuilder().setPixId(pixId).setIdCliente(clienteId).build()

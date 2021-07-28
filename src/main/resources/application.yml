@@ -11,3 +11,8 @@ grpc:
       address: 'localhost:50051'
       plaintext: true
       max-retry-attempts: 10
+
+#https://github.com/micronaut-projects/micronaut-core/issues/240
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
